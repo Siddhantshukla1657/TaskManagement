@@ -1,0 +1,150 @@
+:root {
+  --dark-bg: #1a1a1a;
+  --dark-text: #e0e0e0;
+  --dark-card: #2d2d2d;
+  --accent: #4a90e2;
+  --accent-hover: #357abd;
+  --danger: #e74c3c;
+  --success: #2ecc71;
+}
+
+/* Base Styles */
+body {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex: 1;
+}
+
+/* Cards */
+.card {
+  background-color: var(--dark-card);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* Tasks */
+.task-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.task-item {
+  background-color: #333;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.task-meta {
+  font-size: 0.9em;
+  color: #95a5a6;
+  margin: 10px 0;
+}
+
+.assigned-by {
+  font-style: italic;
+  color: var(--accent);
+}
+
+/* Forms */
+form {
+  margin: 20px 0;
+}
+
+input, select, textarea {
+  background-color: #333;
+  color: var(--dark-text);
+  border: 1px solid #444;
+  padding: 8px;
+  border-radius: 4px;
+  margin: 5px 0;
+  width: 100%;
+}
+
+button {
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--accent-hover);
+}
+
+/* Status Colors */
+.status-completed { color: var(--success); }
+.status-started { color: #f1c40f; }
+.status-midway { color: #e67e22; }
+.status-not-yet-started { color: #95a5a6; }
+
+/* Buttons */
+.btn-delete {
+  background-color: var(--danger) !important;
+}
+
+.btn-delete:hover {
+  background-color: #c0392b !important;
+}
+
+.btn-reassign {
+  background-color: #e67e22;
+}
+
+.btn-reassign:hover {
+  background-color: #d35400;
+}
+
+/* Header/Footer */
+.header {
+  background-color: var(--dark-card);
+  padding: 15px 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--dark-card);
+  margin-top: auto;
+}
+
+/* Tables */
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.user-table th, .user-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #444;
+}
+
+/* Success/Error Messages */
+.success-msg {
+  background-color: var(--success);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+.task-meta p {
+  margin: 5px 0;
+}
